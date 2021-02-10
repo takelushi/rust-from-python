@@ -1,0 +1,13 @@
+[flake8]
+# ignore =
+
+# flake8-quotes
+inline-quotes = single
+multiline-quotes = double
+
+# flake8-import-order
+application-import-names = example
+import-order-style = google
+
+# flake8-coding
+no-accept-encodings = True
