@@ -13,10 +13,18 @@ yapf = "*"
 isort = "*"
 mypy = "*"
 flake8 = "*"
+maturin = "^0.9.0"
+cffi = "^1.14.4"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+# requires = ["poetry-core>=1.0.0"]
+# build-backend = "poetry.core.masonry.api"
+requires = ["maturin", "cffi"]
+build-backend = "maturin"
+
+[tool.maturin]
+bindings = "cffi"
+manylinux = "off"
 
 [tool.isort]
 profile = "google"
